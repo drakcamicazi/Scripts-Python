@@ -1,19 +1,16 @@
-def hashing_function(word, tablesize):
+def hashing_function(word, listsize): #Dado uma string, a função hashing aloca a posição na lista.
 
         sum = 0
         for i in range(len(word)):
             sum = sum + ord(word[i])
 
-        return sum%tablesize
-palavra = []
-tablesize = int(input('Entre com o numero de palavras que deseja alocar: '))
+        return sum%listsize
 
-for j in range(tablesize):
+list = []
+
+listsize = int(input('Entre com o numero de palavras que deseja alocar: '))
+
+for j in range(listsize):
     word = input('Entre com uma palavra a ser alocada: ')
-    alocation = hashing_function(word, tablesize)
-    palavra.insert(alocation,word) #teste
-
-
-for k in range(len(palavra)):
-    print(palavra[k])
-
+    alocation = hashing_function(word, listsize)
+    list.insert(alocation,word) #Insere os elementos na lista, já com a posição da função hashing.
