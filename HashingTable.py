@@ -14,3 +14,9 @@ for j in range(listsize):
     word = input('Entre com uma palavra a ser alocada: ')
     alocation = hashing_function(word, listsize)
     list.insert(alocation,word) #Insere os elementos na lista, já com a posição da função hashing.
+k = listsize
+
+while k >= 0:
+    print(list)
+    index= input('Deseja verificar o indice de qual palavra ? ')
+    print(list.index(index))
